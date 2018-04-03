@@ -1,0 +1,130 @@
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.pranav.pitching.MainActivity">
+
+    <EditText
+        android:id="@+id/distCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please mention your height (in cms)"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/calCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Please mention your weight (in Kgs)"
+        android:inputType="numberDecimal"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/walknew2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:onClick="fade2"
+            android:src="@drawable/walknew2" />
+
+        <ImageView
+            android:id="@+id/walk"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:onClick="fade2"
+            android:src="@drawable/walk" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Congratulations! You have walked"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="steps today!"
+
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/foot"
+            android:layout_width="374dp"
+            android:layout_height="300dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:onClick="fade"
+            android:src="@drawable/foot" />
+
+        <ImageView
+            android:id="@+id/foot2"
+            android:layout_width="match_parent"
+            android:layout_height="300sp"
+            android:layout_margin="10dp"
+            android:alpha="0"
+            android:onClick="fade"
+            android:src="@drawable/foot2" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="convert"
+        android:text="Distance Walked (in cms)" />
+    <Button
+        android:id="@+id/tvCal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calorie"
+        android:text="Total calories you burnt today !"
+        />
+</LinearLayout>
+
+</ScrollView>
